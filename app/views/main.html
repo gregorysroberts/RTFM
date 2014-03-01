@@ -1,0 +1,24 @@
+
+<div ng-controller="ThreadctrlCtrl">
+
+  <div class="header">
+   Make Some Chats
+  </div>
+
+
+  <div class="messages">
+    <div ng-repeat="message in messages">{{message.body}}
+
+      <div>
+        Reply to Thread: <textarea ng-model="newReply" ng-keydown="addMessage($event)" placeholder="thread-box"></textarea>
+      </div>
+
+      <div ng-repeat="reply in replies">{{message.reply}}</div>
+
+    </div>
+  </div>
+
+  <div>
+    <textarea ng-model="newMessage" ng-keydown="addMessage($event)" placeholder="message-box"></textarea>
+  </div>
+</div>
